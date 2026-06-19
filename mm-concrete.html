@@ -1,126 +1,67 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>M&M Concrete — 24/7 Lead Catcher (Demo)</title><meta name="robots" content="noindex"/>
-<style>
-:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--muted:#6e6e73;--line:#e6e6ea;--accent:#5b6b7a;--accent2:#9db2c4;--blue:#0071e3;--good:#34c759;--radius:22px;--shadow:0 10px 44px rgba(0,0,0,.09);--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>M&M Concrete — 24/7 Lead Catcher (Demo)</title><meta name="robots" content="noindex"/><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--muted:#6e6e73;--line:#e6e6ea;--accent:#5b6b7a;--accent2:#cdd8e2;--blue:#0071e3;--good:#34c759;--radius:22px;--shadow:0 10px 44px rgba(0,0,0,.09);--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
 .btn{appearance:none;border:0;cursor:pointer;font-family:inherit;font-size:16px;font-weight:560;padding:15px 28px;border-radius:999px;text-decoration:none;display:inline-block;transition:transform .15s,filter .2s}
-.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
-.btn-accent{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.18)}
-.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}.btn-accent{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.22)}.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
 .ribbon{background:var(--ink);color:#fff;font-size:13px;text-align:center;padding:9px 14px}.ribbon b{color:var(--accent2)}
-.hero{position:relative;min-height:82vh;display:flex;align-items:center;color:#fff;background:linear-gradient(135deg,#2b3742 0%,#4a5a68 100%)}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 500px at 80% -10%,rgba(255,255,255,.10),transparent)}
+.hero{position:relative;min-height:84vh;display:flex;align-items:center;color:#fff;background:linear-gradient(180deg,rgba(8,10,12,.55),rgba(8,10,12,.82)),url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAH-9_xoq3154DOsmZKZhbj7_z3po8PbcPZs0-QN7AK_7p-emzr6i3ME0x3nDyZYvo2xjGu9HEXLSGKhN-BSlktWmK6WAnuEi1INFDCbvpAapw3X-5K-RWKyOC0xbqvtLNRKCDVXAggDCETx=w1500-h1000-k-no') center/cover no-repeat}
 .hero .wrap{position:relative;z-index:2;padding:60px 22px}
-.mark{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px}
-.mark .badge{width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;font-weight:800;font-size:18px;letter-spacing:.5px}
-.mark .wm{font-weight:650;font-size:20px;letter-spacing:.2px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.5px;text-transform:uppercase;color:#fff;font-weight:600;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.3);padding:6px 13px;border-radius:999px}
-h1{font-size:clamp(34px,6.4vw,60px);line-height:1.04;letter-spacing:-.02em;font-weight:680;margin:20px 0 16px;max-width:15ch}
-.hsub{font-size:clamp(17px,2.4vw,21px);color:#eef0f2;max-width:600px}
+.mark{display:inline-flex;align-items:center;gap:11px;margin-bottom:22px}
+.mark .badge{width:54px;height:54px;border-radius:14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;font-weight:800;font-size:17px;letter-spacing:.5px;backdrop-filter:blur(4px)}
+.mark .wm{font-weight:650;font-size:20px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.5px;text-transform:uppercase;color:#fff;font-weight:600;background:rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.32);padding:6px 13px;border-radius:999px}
+h1{font-size:clamp(34px,6.4vw,60px);line-height:1.04;letter-spacing:-.02em;font-weight:680;margin:20px 0 16px;max-width:15ch;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.hsub{font-size:clamp(17px,2.4vw,21px);color:#eef0f2;max-width:600px;text-shadow:0 1px 12px rgba(0,0,0,.35)}
 .rate-line{display:flex;align-items:center;gap:10px;margin:22px 0 4px;font-size:15px;color:#fff}.rate-line .st{letter-spacing:2px;font-size:17px;color:#ffd479}
 .cta-row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
 .sec{padding:70px 0}.kicker{color:var(--accent);font-weight:650;font-size:14px;letter-spacing:.4px;text-transform:uppercase}
-h2{font-size:clamp(28px,4.6vw,42px);letter-spacing:-.02em;font-weight:660;line-height:1.07;margin:10px 0}
-.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:640px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 18px;text-align:center;box-shadow:var(--shadow)}
-.stat .n{font-size:clamp(32px,5vw,46px);font-weight:700;letter-spacing:-.02em}.stat .l{font-size:14px;color:var(--muted);margin-top:8px}
-@media(max-width:680px){.stats{grid-template-columns:1fr}}
+h2{font-size:clamp(28px,4.6vw,42px);letter-spacing:-.02em;font-weight:660;line-height:1.07;margin:10px 0}.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:640px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 18px;text-align:center;box-shadow:var(--shadow)}.stat .n{font-size:clamp(32px,5vw,46px);font-weight:700;letter-spacing:-.02em}.stat .l{font-size:14px;color:var(--muted);margin-top:8px}@media(max-width:680px){.stats{grid-template-columns:1fr}}
 .vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}@media(max-width:760px){.vs{grid-template-columns:1fr}}
-.col{border-radius:var(--radius);padding:26px;border:1px solid var(--line)}.col.bad{background:#fff}.col.good{background:linear-gradient(180deg,#fff,#f3f8f4);border-color:#cfe6d4}
-.col h3{font-size:19px;margin-bottom:14px}.col ul{list-style:none;display:grid;gap:11px}.col li{display:flex;gap:10px;font-size:15.5px;color:#333}
-.x{color:#ff3b30;font-weight:700}.c{color:var(--good);font-weight:700}
-.demo{display:grid;grid-template-columns:1.02fr .98fr;gap:36px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:40px;box-shadow:var(--shadow)}
-@media(max-width:880px){.demo{grid-template-columns:1fr;padding:24px}}
-.steps{list-style:none;display:grid;gap:13px;margin-top:18px}.steps li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
-.dot{flex:0 0 27px;height:27px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:700}
+.col{border-radius:var(--radius);padding:26px;border:1px solid var(--line)}.col.bad{background:#fff}.col.good{background:linear-gradient(180deg,#fff,#f3f8f4);border-color:#cfe6d4}.col h3{font-size:19px;margin-bottom:14px}.col ul{list-style:none;display:grid;gap:11px}.col li{display:flex;gap:10px;font-size:15.5px;color:#333}.x{color:#ff3b30;font-weight:700}.c{color:var(--good);font-weight:700}
+.demo{display:grid;grid-template-columns:1.02fr .98fr;gap:36px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:40px;box-shadow:var(--shadow)}@media(max-width:880px){.demo{grid-template-columns:1fr;padding:24px}}
+.steps{list-style:none;display:grid;gap:13px;margin-top:18px}.steps li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}.dot{flex:0 0 27px;height:27px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:700}
 .phone{justify-self:center;width:338px;max-width:100%;background:#fff;border:1px solid var(--line);border-radius:44px;box-shadow:0 26px 70px rgba(0,0,0,.2);overflow:hidden}
-.phone .top{background:var(--ink);color:#fff;padding:15px 18px;display:flex;align-items:center;gap:11px}
-.avatar{width:40px;height:40px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-weight:800;color:#fff}
-.phone .nm{font-weight:600;font-size:15px}.phone .stt{font-size:12px;color:#a9e7b6;display:flex;align-items:center;gap:5px}.phone .stt::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--good);display:inline-block}
-.chat{height:372px;overflow-y:auto;padding:16px;background:#f6f6f8;display:flex;flex-direction:column;gap:9px;scroll-behavior:smooth}
-.bubble{max-width:80%;padding:10px 13px;border-radius:17px;font-size:14.5px;line-height:1.4;animation:pop .25s ease}
-.bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:5px;align-self:flex-start}.me{background:var(--blue);color:#fff;border-bottom-right-radius:5px;align-self:flex-end}
-@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.typing{align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:17px;padding:12px 14px;display:flex;gap:4px}
-.typing span{width:7px;height:7px;border-radius:50%;background:#bcbcc2;animation:b 1.2s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
-@keyframes b{0%,60%,100%{opacity:.3}30%{opacity:1}}
-.chips{display:flex;flex-wrap:wrap;gap:7px;padding:11px 13px;border-top:1px solid var(--line);background:#fff}
-.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;font-size:13px;cursor:pointer;font-family:inherit;color:var(--ink);transition:.15s}.chip:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
-.composer{display:flex;gap:8px;padding:11px 13px;border-top:1px solid var(--line);background:#fff}.composer input{flex:1;border:1px solid var(--line);border-radius:999px;padding:11px 15px;font-size:14px;font-family:inherit;outline:none}.composer input:focus{border-color:var(--blue)}
-.send{background:var(--blue);color:#fff;border:0;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer}
-.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}@media(max-width:760px){.cards{grid-template-columns:1fr}}
-.rev{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}.rev .s{color:#e6a700;letter-spacing:2px}.rev p{font-size:15px;margin:10px 0 12px}.rev .who{font-size:13px;color:var(--muted)}
-.guar{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}@media(max-width:760px){.guar{grid-template-columns:1fr}}
-.gitem{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center;box-shadow:var(--shadow)}.gitem .ic{font-size:26px}.gitem h4{margin:8px 0 5px;font-size:16px}.gitem p{font-size:13.5px;color:var(--muted)}
-.close{background:linear-gradient(180deg,#1d1d1f,#000);color:#fff;border-radius:30px;padding:52px 30px;text-align:center}
-.close .scar{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;margin-bottom:18px}
-.close h2{color:#fff}.close p{color:#c7c7cc;margin:14px auto 26px;max-width:520px;font-size:17px}.close .who{margin-top:22px;color:#9a9aa0;font-size:14px;line-height:1.7}.close a.mail{color:#6cb2ff;text-decoration:none}
+.phone .top{background:var(--ink);color:#fff;padding:15px 18px;display:flex;align-items:center;gap:11px}.avatar{width:40px;height:40px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-weight:800;color:#fff}.phone .nm{font-weight:600;font-size:15px}.phone .stt{font-size:12px;color:#a9e7b6;display:flex;align-items:center;gap:5px}.phone .stt::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--good);display:inline-block}
+.chat{height:372px;overflow-y:auto;padding:16px;background:#f6f6f8;display:flex;flex-direction:column;gap:9px;scroll-behavior:smooth}.bubble{max-width:80%;padding:10px 13px;border-radius:17px;font-size:14.5px;line-height:1.4;animation:pop .25s ease}.bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:5px;align-self:flex-start}.me{background:var(--blue);color:#fff;border-bottom-right-radius:5px;align-self:flex-end}@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.typing{align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:17px;padding:12px 14px;display:flex;gap:4px}.typing span{width:7px;height:7px;border-radius:50%;background:#bcbcc2;animation:b 1.2s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}@keyframes b{0%,60%,100%{opacity:.3}30%{opacity:1}}
+.chips{display:flex;flex-wrap:wrap;gap:7px;padding:11px 13px;border-top:1px solid var(--line);background:#fff}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;font-size:13px;cursor:pointer;font-family:inherit;color:var(--ink);transition:.15s}.chip:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.composer{display:flex;gap:8px;padding:11px 13px;border-top:1px solid var(--line);background:#fff}.composer input{flex:1;border:1px solid var(--line);border-radius:999px;padding:11px 15px;font-size:14px;font-family:inherit;outline:none}.composer input:focus{border-color:var(--blue)}.send{background:var(--blue);color:#fff;border:0;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.gal img{width:100%;height:200px;object-fit:cover;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow)}@media(max-width:760px){.gal{grid-template-columns:1fr 1fr}.gal img{height:150px}}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}@media(max-width:760px){.cards{grid-template-columns:1fr}}.rev{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}.rev .s{color:#e6a700;letter-spacing:2px}.rev p{font-size:15px;margin:10px 0 12px}.rev .who{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--muted)}.rev .ini{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700;font-size:12px}
+.guar{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}@media(max-width:760px){.guar{grid-template-columns:1fr}}.gitem{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center;box-shadow:var(--shadow)}.gitem .ic{font-size:26px}.gitem h4{margin:8px 0 5px;font-size:16px}.gitem p{font-size:13.5px;color:var(--muted)}
+.close{background:linear-gradient(180deg,#1d1d1f,#000);color:#fff;border-radius:30px;padding:52px 30px;text-align:center}.close .scar{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;margin-bottom:18px}.close h2{color:#fff}.close p{color:#c7c7cc;margin:14px auto 26px;max-width:520px;font-size:17px}.close .who{margin-top:22px;color:#9a9aa0;font-size:14px;line-height:1.7}.close a.mail{color:#6cb2ff;text-decoration:none}
 footer{padding:26px 0 110px;text-align:center;color:#a1a1a6;font-size:12.5px}
-.float{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;gap:10px;align-items:center;background:var(--ink);color:#fff;border-radius:999px;padding:11px 16px 11px 13px;box-shadow:0 12px 34px rgba(0,0,0,.3);text-decoration:none;font-weight:600;font-size:15px}
-.float .pulse{width:11px;height:11px;border-radius:50%;background:var(--good);animation:pl 1.8s infinite}
-@keyframes pl{0%{box-shadow:0 0 0 0 rgba(52,199,89,.55)}70%{box-shadow:0 0 0 12px rgba(52,199,89,0)}100%{box-shadow:0 0 0 0 rgba(52,199,89,0)}}
+.float{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;gap:10px;align-items:center;background:var(--ink);color:#fff;border-radius:999px;padding:11px 16px 11px 13px;box-shadow:0 12px 34px rgba(0,0,0,.3);text-decoration:none;font-weight:600;font-size:15px}.float .pulse{width:11px;height:11px;border-radius:50%;background:var(--good);animation:pl 1.8s infinite}@keyframes pl{0%{box-shadow:0 0 0 0 rgba(52,199,89,.55)}70%{box-shadow:0 0 0 12px rgba(52,199,89,0)}100%{box-shadow:0 0 0 0 rgba(52,199,89,0)}}
 </style></head><body>
 <div class="ribbon">Private demo built for <b>M&M Concrete</b> by Jay</div>
 <section class="hero"><div class="wrap">
   <div class="mark"><div class="badge">M&M</div><div class="wm">M&M Concrete</div></div>
-  <span class="eyebrow">Built for M&M Concrete · Blue Island</span>
-  <h1>Stop losing concrete jobs to missed calls.</h1>
-  <p class="hsub">A 24/7 lead catcher for M&M Concrete. When you're on a pour, it answers your callers, finds out what they need, and books the estimate to your phone. Try it below.</p>
-  <div class="rate-line"><span class="st">★★★★★</span> <span>4.8 on Google · 31 reviews · serving the south suburbs</span></div>
+  <span class="eyebrow">Built for M&M Concrete · Tinley Park · south suburbs</span>
+  <h1>Martin, you do top-tier concrete. Stop losing jobs to missed calls.</h1><p class="hsub">A 24/7 lead catcher for M&M Concrete. When you and the crew are on a pour, it answers your callers, finds out what they need, and books the estimate to your phone. Try it below.</p><div class="rate-line"><span class="st">★★★★★</span> <span>4.8 on Google · 31 reviews · serving the south suburbs</span></div>
   <div class="cta-row"><a class="btn btn-accent" href="#try">Try it live</a><a class="btn btn-ghost" href="#get">What it costs</a></div>
 </div></section>
-
-<section class="sec"><div class="wrap reveal"><span class="kicker">The problem</span>
-  <h2>You can't pour and answer the phone at the same time.</h2><p class="lead">M&M has the reputation. The leak is the calls that come in while you're working or after hours.</p>
-  <div class="stats">
-    <div class="stat"><div class="n" data-to="62" data-suf="%">0%</div><div class="l">of calls to shops like yours go unanswered in busy season</div></div>
-    <div class="stat"><div class="n" data-to="85" data-suf="%">0%</div><div class="l">of people who don't get through never call back</div></div>
-    <div class="stat"><div class="n" data-pre="$" data-to="72" data-suf="k+">$0</div><div class="l">in jobs the average contractor loses to missed calls a year</div></div>
-  </div>
-  <div class="vs">
-    <div class="col bad"><h3>Right now</h3><ul>
-      <li><span class="x">✕</span> A call comes in while you're on the job and goes to voicemail.</li>
-      <li><span class="x">✕</span> You call back later, they already hired whoever picked up.</li>
-      <li><span class="x">✕</span> Strong reviews, but no website catching leads at night.</li></ul></div>
-    <div class="col good"><h3>With your lead catcher</h3><ul>
-      <li><span class="c">✓</span> Every caller gets a text back in seconds, day or night.</li>
-      <li><span class="c">✓</span> It asks what they need and books the estimate for you.</li>
-      <li><span class="c">✓</span> The lead lands on your phone, ready to go.</li></ul></div>
-  </div>
+<section class="sec"><div class="wrap reveal"><span class="kicker">The problem</span><h2>You can't pour and answer the phone at the same time.</h2><p class="lead">M&M has the reputation and the reviews. The leak is the calls that come in while you're working or after hours, with no website catching them.</p>
+  <div class="stats"><div class="stat"><div class="n" data-to="62" data-suf="%">0%</div><div class="l">of calls to shops like yours go unanswered in busy season</div></div><div class="stat"><div class="n" data-to="85" data-suf="%">0%</div><div class="l">of people who don't get through never call back</div></div><div class="stat"><div class="n" data-pre="$" data-to="72" data-suf="k+">$0</div><div class="l">in jobs the average contractor loses to missed calls a year</div></div></div>
+  <div class="vs"><div class="col bad"><h3>Right now</h3><ul><li><span class="x">✕</span> A call comes in while you're on the job and goes to voicemail.</li><li><span class="x">✕</span> You call back later, they already hired whoever picked up.</li><li><span class="x">✕</span> Strong reviews, but no website catching leads at night.</li></ul></div>
+  <div class="col good"><h3>With your lead catcher</h3><ul><li><span class="c">✓</span> Every caller gets a text back in seconds, day or night.</li><li><span class="c">✓</span> It asks what they need and books the estimate for you.</li><li><span class="c">✓</span> The lead lands on your phone, ready to go.</li></ul></div></div>
 </div></section>
-
 <section class="sec" id="try" style="padding-top:6px"><div class="wrap"><div class="demo reveal">
-  <div><span class="kicker">Try it, it's working</span><h2 style="font-size:clamp(26px,4vw,38px)">Loaded with M&M Concrete's services.</h2>
-  <p class="lead" style="font-size:17px;margin-top:12px">Ask it anything a customer would. It answers in your voice and grabs the lead in seconds.</p>
+  <div><span class="kicker">Try it, it's working</span><h2 style="font-size:clamp(26px,4vw,38px)">Loaded with M&M Concrete's services.</h2><p class="lead" style="font-size:17px;margin-top:12px">Ask it anything a customer would. It answers in your voice and grabs the lead in seconds.</p>
   <ul class="steps"><li><span class="dot">1</span><span><b>Answers right away</b>, 24/7.</span></li><li><span class="dot">2</span><span><b>Finds out what they need</b> and what it's for.</span></li><li><span class="dot">3</span><span><b>Books it and texts you</b> the lead.</span></li></ul></div>
-  <div class="phone"><div class="top"><div class="avatar">M&M</div><div><div class="nm">M&M Concrete</div><div class="stt">replies in seconds</div></div></div>
-  <div class="chat" id="chat"></div><div class="chips" id="chips"></div>
-  <div class="composer"><input id="inp" placeholder="Type a question…" autocomplete="off"/><button class="send" id="send">↑</button></div></div>
+  <div class="phone"><div class="top"><div class="avatar">M&M</div><div><div class="nm">M&M Concrete</div><div class="stt">replies in seconds</div></div></div><div class="chat" id="chat"></div><div class="chips" id="chips"></div><div class="composer"><input id="inp" placeholder="Type a question…" autocomplete="off"/><button class="send" id="send">↑</button></div></div>
 </div></div></section>
-
-<section class="sec" style="padding-top:6px"><div class="wrap reveal"><span class="kicker">Proof</span><h2>People already trust you.</h2><p class="lead" style="margin-top:8px">4.8 stars · 31 reviews on Google.</p><div class="cards"><div class="rev"><div class="s">★★★★★</div><p>They were honest, responsive, and delivered exactly what they promised.</p><div class="who">Verified Google review</div></div><div class="rev"><div class="s">★★★★★</div><p>Came out to the house and rebuilt the paver stair steps on our front porch. Great work.</p><div class="who">Verified Google review</div></div></div></div></section>
-
-<section class="sec" style="padding-top:6px"><div class="wrap reveal"><span class="kicker">No risk</span><h2>Easy to start.</h2>
-  <div class="guar"><div class="gitem"><div class="ic">⚡</div><h4>Live in days</h4><p>I set it all up. You don't touch a thing.</p></div>
-  <div class="gitem"><div class="ic">📲</div><h4>Just get the texts</h4><p>New leads land on your phone, ready to book.</p></div>
-  <div class="gitem"><div class="ic">🔌</div><h4>Cancel anytime</h4><p>Month to month. No catching leads, you walk.</p></div></div>
-</div></section>
-
-<section class="sec" id="get" style="padding-top:6px"><div class="wrap"><div class="close reveal">
-  <span class="scar">I only take on a few of these at a time</span>
-  <h2>Want to catch every concrete lead?</h2><p>Going live takes a few days. Text me and I'll walk you through it, no pressure.</p>
-  <a class="btn btn-accent" href="sms:+13128699631">Text Jay</a>
-  <div class="who">Jay · (312) 869-9631 · <a class="mail" href="mailto:jaypatelhq@gmail.com">jaypatelhq@gmail.com</a><br/>Local, Chicago</div>
-</div></div></section>
-<footer class="wrap">Private demonstration for M&M Concrete. Not affiliated unless engaged.</footer>
+<section class="sec" style="padding-top:6px"><div class="wrap reveal"><span class="kicker">Your work</span><h2>Now imagine every one of these, booked automatically.</h2><div class="gal"><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAH-9_xoq3154DOsmZKZhbj7_z3po8PbcPZs0-QN7AK_7p-emzr6i3ME0x3nDyZYvo2xjGu9HEXLSGKhN-BSlktWmK6WAnuEi1INFDCbvpAapw3X-5K-RWKyOC0xbqvtLNRKCDVXAggDCETx=w1500-h1000-k-no" alt="M&M Concrete work" loading="lazy"/><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEb0_T7kmp1TMX--bw5ck0ASRmI7xxH1Eiesldy2kGMcWrS8ijR2hhejL7Yo-94OmHKRKla1oMZ2Dfb8_9v3WMd3MBt3B-QQOpUb1Jd1gF2MdzNL1wS80rUQQijHOXH5JAa6SYNdg42UMpE=w800-h600-k-no" alt="M&M Concrete work" loading="lazy"/><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFB-T9F4yi9oj2_Q4SJA3fgsKVsM3rIbOhuwUm0S1MATFS941Akc3Nm70VakNPFCx1LrWtLd4nO1MkloPFemtFAruddHIv1dZHLnP3GoQFd0o1mnXeZEGhgi801vmoOrzo=w800-h600-k-no" alt="M&M Concrete work" loading="lazy"/></div></div></section>
+<section class="sec" style="padding-top:6px"><div class="wrap reveal"><span class="kicker">Proof</span><h2>People already trust you.</h2><p class="lead" style="margin-top:8px">4.8 stars across 31 reviews on Google.</p><div class="cards"><div class="rev"><div class="s">★★★★★</div><p>They replaced our driveway and the entire crew was professional, efficient, and did excellent work. Martin, the owner, was especially great to work with.</p><div class="who"><span class="ini">AY</span> Andrew Youngquist · Google review</div></div><div class="rev"><div class="s">★★★★★</div><p>Fantastic experience. Highest quality materials, communicative, great work. They poured our concrete patio, handled all the permits, and cleared the old debris.</p><div class="who"><span class="ini">MG</span> Maia Griffith · Google review</div></div></div></div></section>
+<section class="sec" style="padding-top:6px"><div class="wrap reveal"><span class="kicker">No risk</span><h2>Easy to start.</h2><div class="guar"><div class="gitem"><div class="ic">⚡</div><h4>Live in days</h4><p>I set it all up. You don't touch a thing.</p></div><div class="gitem"><div class="ic">📲</div><h4>Just get the texts</h4><p>New leads land on your phone, ready to book.</p></div><div class="gitem"><div class="ic">🔌</div><h4>Cancel anytime</h4><p>Month to month. No catching leads, you walk.</p></div></div></div></section>
+<section class="sec" id="get" style="padding-top:6px"><div class="wrap"><div class="close reveal"><span class="scar">I only take on a few of these at a time</span><h2>Want to catch every concrete lead, Martin?</h2><p>Going live takes a few days. Text me and I'll walk you through it, no pressure.</p><a class="btn btn-accent" href="sms:+13128699631">Text Jay</a><div class="who">Jay · (312) 869-9631 · <a class="mail" href="mailto:jaypatelhq@gmail.com">jaypatelhq@gmail.com</a><br/>Local, Chicago</div></div></div></section>
+<footer class="wrap">Private demonstration for M&M Concrete. Not affiliated unless engaged. Photos &amp; reviews are the business's own public Google listing.</footer>
 <a class="float" href="#get"><span class="pulse"></span> Get this for M&M Concrete</a>
-<script>
-const CONFIG={"greeting": "Hi, thanks for reaching out to M&M Concrete. What are you looking to get done, a driveway, patio, or paver walkway?", "chips": ["Do you do paver patios?", "How much for a driveway?", "Do you serve my area?", "Can I get an estimate?"], "answers": [{"k": ["paver", "patio", "walkway", "brick"], "a": "Yes, we do paver patios, walkways, and brick work, plus stamped and stained concrete. Want a free estimate?"}, {"k": ["driveway", "concrete", "slab", "pour"], "a": "We pour driveways, slabs, garage floors and more. Every job's different so we do a free on-site estimate. Want me to set one up?"}, {"k": ["cost", "price", "quote", "how much", "estimate"], "a": "We give a free on-site estimate and a clear price, usually same week. Want to grab a slot?"}, {"k": ["area", "blue island", "south", "near", "serve", "location"], "a": "We cover Blue Island and the south suburbs. Where's the project at?"}, {"k": ["stair", "step", "porch", "repair", "fix"], "a": "Yep, we do steps, porches and repairs too. Want a free look at it?"}], "offer": "Want me to grab your name and number so Martin can text you a free estimate?", "fallback": "Good question, Martin can sort that out fast. Want me to grab your number so he can text you?"};
+<script>const CONFIG={"greeting": "Hi, thanks for reaching out to M&M Concrete. What are you looking to get done, a driveway, patio, or paver walkway?", "chips": ["Do you do paver patios?", "How much for a driveway?", "Do you pull permits?", "Can I get an estimate?"], "answers": [{"k": ["paver", "patio", "walkway", "brick", "stamp"], "a": "Yes, we do paver patios, walkways and stamped concrete, all high-end materials. Want a free estimate?"}, {"k": ["driveway", "slab", "pour", "garage", "floor"], "a": "We pour driveways, slabs and garage floors. Every job's different so we do a free on-site estimate. Want me to set one up?"}, {"k": ["permit", "debris", "cleanup", "clean"], "a": "Yep, we handle all the permits and haul away the old debris, you don't lift a finger. Want a free estimate?"}, {"k": ["cost", "price", "quote", "how much", "estimate"], "a": "We give a free on-site estimate and a clear price, usually same week. Want to grab a slot?"}, {"k": ["area", "tinley", "blue island", "south", "near", "serve", "location"], "a": "We cover Tinley Park and the south suburbs. Where's the project at?"}], "offer": "Want me to grab your name and number so Martin can text you a free estimate?", "fallback": "Good question, Martin can sort that out fast. Want me to grab your number so he can text you?"};
 const chat=document.getElementById('chat'),chipsEl=document.getElementById('chips'),inp=document.getElementById('inp');let stage='chat',lead={};
 function bubble(t,w){const b=document.createElement('div');b.className='bubble '+(w==='me'?'me':'bot');b.textContent=t;chat.appendChild(b);chat.scrollTop=chat.scrollHeight;}
 function typing(){const t=document.createElement('div');t.className='typing';t.id='typing';t.innerHTML='<span></span><span></span><span></span>';chat.appendChild(t);chat.scrollTop=chat.scrollHeight;}
@@ -135,10 +76,8 @@ function handle(text){if(!text.trim())return;bubble(text,'me');const t=text.trim
  if(stage==='askPhone'){if(!looksPhone(t))return botSay("What's the best phone number to reach you?");lead.phone=t;stage='done';setChips([]);return botSay("Perfect, you're booked. We'll text "+lead.phone+" shortly. (In the real version this lead just hit the owner's phone in under a minute.)");}
  if(stage==='done'){return botSay("All set! That's how every missed call would get caught for you.");}
  const a=match(t);if(a){botSay(a,()=>{setTimeout(()=>{stage='offer';setChips(["Yes please","Not yet"]);botSay(CONFIG.offer);},450);});}else{botSay(CONFIG.fallback,()=>{stage='offer';setChips(["Yes please","Not yet"]);});}}
-document.getElementById('send').onclick=()=>{handle(inp.value);inp.value='';};
-inp.addEventListener('keydown',e=>{if(e.key==='Enter'){handle(inp.value);inp.value='';}});
+document.getElementById('send').onclick=()=>{handle(inp.value);inp.value='';};inp.addEventListener('keydown',e=>{if(e.key==='Enter'){handle(inp.value);inp.value='';}});
 setTimeout(()=>botSay(CONFIG.greeting),400);setChips(CONFIG.chips);
 function cu(el){const to=+el.dataset.to,pre=el.dataset.pre||'',suf=el.dataset.suf||'';let n=0,s=Math.max(1,Math.round(to/38));const i=setInterval(()=>{n+=s;if(n>=to){n=to;clearInterval(i);}el.textContent=pre+n+suf;},26);}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-to]').forEach(cu);io.unobserve(e.target);}}),{threshold:.14});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script></body></html>
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script></body></html>
